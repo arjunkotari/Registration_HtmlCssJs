@@ -22,3 +22,15 @@ function Email(){
         textError.textContent = "email is Incorrect";
         }
 }
+
+function MobileNumber(){
+    const number = document.querySelector('#number');
+    const textError = document.querySelector('.number-error');
+    let numberRegex = RegExp('^[0-9]{2}[ ]{1}[0-9]{10}$');
+    if(numberRegex.test(number.value)){
+        textError.textContent=" ";
+    }
+    else {
+        textError.textContent = "Number is Incorrect";
+        }
+}
