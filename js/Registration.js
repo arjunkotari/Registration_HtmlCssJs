@@ -39,7 +39,7 @@ function MobileNumber(){
 function Password(){
     const password = document.querySelector('#pwd');
     const textError = document.querySelector('.password-error');
-    let passwordRegex = RegExp('^[a-zA-Z0-9]{8,}$');
+    let passwordRegex = RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.+[!@#$%^&+=._-])[A-Za-z0-9].{7,}$');
     if(passwordRegex.test(password.value)){
         textError.textContent=" ";
     }
