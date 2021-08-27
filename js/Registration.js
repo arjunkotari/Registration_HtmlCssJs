@@ -7,7 +7,7 @@ function Name(){
         textError.textContent=" ";
     }
     else {
-        textError.textContent = "Namee is Incorrect";
+        textError.textContent = "Name is Incorrect";
         }
 }
 
@@ -32,5 +32,18 @@ function MobileNumber(){
     }
     else {
         textError.textContent = "Number is Incorrect";
+        }
+}
+
+
+function Password(){
+    const password = document.querySelector('#pwd');
+    const textError = document.querySelector('.password-error');
+    let passwordRegex = RegExp('^[a-zA-Z0-9]{8,}$');
+    if(passwordRegex.test(password.value)){
+        textError.textContent=" ";
+    }
+    else {
+        textError.textContent = "Password is Incorrect";
         }
 }
